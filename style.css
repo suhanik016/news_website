@@ -167,7 +167,7 @@ main{
     }
     main {
         padding-block: 10px;
-        margin-top: 70px;
+        margin-top: 71px;
     }
     .search-button{
         padding: 5px 18px;
@@ -176,4 +176,5 @@ main{
         flex-direction: column;
         padding: 10px 0;
     }
+
 }
