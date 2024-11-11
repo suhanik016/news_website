@@ -9,7 +9,14 @@ function reload() {
 
 async function fetchNews(query) {
     try {
-        const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+        const res = await fetch(`${url}${query}&apiKey=${API_KEY}`, {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            }
+        });
+
+        console.log(`Response status: ${res.status} - ${res.statusText}`);
         
         // Check if the response is OK
         if (!res.ok) {
@@ -31,6 +38,7 @@ async function fetchNews(query) {
     }
 }
 
+   
 function bindData(articles) {
     const cardsContainer = document.getElementById('cards-container');
     const newsCardTemplate = document.getElementById('template-news-card');
