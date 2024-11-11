@@ -175,6 +175,7 @@ main{
     .nav-links ul {
         flex-direction: column;
         padding: 10px 0;
+    
     }
 
 }
